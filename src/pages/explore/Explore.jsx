@@ -4,20 +4,18 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 
 import styles from './Explore.module.css';
+import ExploreLink from '../../components/ExploreLink/ExploreLink';
 
 export default function Explore() {
   return (
     <section className={ styles.container_page_explore }>
       <Header title="Explore" />
       <div className={ styles.container_explore }>
-        <Link to="explore/foods">
-          <div
-            data-testid="explore-foods"
-            className={ styles.explore_foods }
-          >
-            <span className={ styles.title_button }>Explore Foods</span>
-          </div>
-        </Link>
+        <ExploreLink
+          link_to="explore/foods"
+          data-testid="explore-foods"
+          title="Explore Foods"
+        />
         <Link to="explore/drinks">
           <div
             data-testid="explore-drinks"
