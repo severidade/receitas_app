@@ -5,7 +5,7 @@ import DoneRecipes from './pages/DoneRecipes';
 import Drinks from './pages/Drinks';
 import DrinksDetails from './pages/DrinksDetails';
 import DrinksInProgress from './pages/DrinksInProgress';
-import Explore from './pages/Explore';
+import Explore from './pages/explore/Explore';
 import ExploreDrinks from './pages/ExploreDrinks';
 import ExploreDrinksIngredients from './pages/ExploreDrinksIngredients';
 import ExploreFoods from './pages/ExploreFoods';
@@ -27,9 +27,9 @@ function App() {
       <Route exact path="/foods" component={ Foods } />
       <Route exact path="/profile" component={ Profile } />
       <Route exact path="/drinks" component={ Drinks } />
+
       <Route exact path="/explore" component={ Explore } />
       <Route exact path="/explore/foods" component={ ExploreFoods } />
-      <Route exact path="/explore/drinks" component={ ExploreDrinks } />
       <Route
         exact
         path="/explore/foods/ingredients"
@@ -37,14 +37,17 @@ function App() {
       />
       <Route
         exact
-        path="/explore/drinks/ingredients"
-        component={ ExploreDrinksIngredients }
-      />
-      <Route
-        exact
         path="/explore/foods/nationalities"
         component={ ExploreFoodsNationalities }
       />
+
+      <Route exact path="/explore/drinks" component={ ExploreDrinks } />
+      <Route
+        exact
+        path="/explore/drinks/ingredients"
+        component={ ExploreDrinksIngredients }
+      />
+
       <Route exact path="/done-recipes" component={ DoneRecipes } />
       <Route exact path="/favorite-recipes" component={ FavoriteRecipes } />
       <Route
