@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
 
-import '../CSS/page_explore_food.css';
+// import '../CSS/page_explore_food.css';
+import './Explore_pages.css';
 
 export default function ExploreFoods() {
   const [randomFoodUrl, setRandomFoodUrl] = useState();
@@ -17,7 +18,7 @@ export default function ExploreFoods() {
   useEffect(() => { randomFood(); }, []);
 
   return (
-    <section className="container_page_explore_foods">
+    <section className="container_page_explore">
       <Header title="Explore Foods" />
       <div className="container_explore_foods">
         <Link to="/explore/foods/ingredients">
