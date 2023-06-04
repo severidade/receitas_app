@@ -24,6 +24,11 @@ a[ class ^= 'explore' ] {
   background: url('./img/explore_food_nacionalidade.svg');
 }
 
+.explore_food_by_surprise {
+  background: url('./img/food_suprise.svg');
+}
+
+
 .title_link {
   bottom: 0;
   color: var(--dark_color);

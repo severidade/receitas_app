@@ -4,7 +4,7 @@ import './ExploreLink.css';
 
 import { Link } from 'react-router-dom';
 
-export default function ExploreLink({ dataTestId }) {
+export default function ExploreLink({ dataTestId, url }) {
   const linkMapping = {
     'explore-foods': {
       linkTo: 'explore/foods',
@@ -17,7 +17,7 @@ export default function ExploreLink({ dataTestId }) {
       className: 'explore_drinks',
     },
     'explore-by-ingredient': {
-      linkTo: '/explore/foods/nationalities',
+      linkTo: '/explore/foods/ingredients',
       title: 'By Ingredient',
       className: 'explore_food_by_ingredient',
     },
@@ -25,6 +25,11 @@ export default function ExploreLink({ dataTestId }) {
       linkTo: '/explore/foods/nationalities',
       title: 'By Nationality',
       className: 'explore_food_by_nationality',
+    },
+    'explore-surprise': {
+      linkTo: `/foods/${url}`,
+      title: 'Surprise me',
+      className: 'explore_food_by_surprise',
     },
   };
 
@@ -47,4 +52,5 @@ export default function ExploreLink({ dataTestId }) {
 
 ExploreLink.propTypes = {
   dataTestId: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };

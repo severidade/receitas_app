@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import ExploreLink from '../../components/ExploreLink/ExploreLink';
@@ -24,15 +23,7 @@ export default function ExploreFoods() {
       <div className="container_explore_foods">
         <ExploreLink dataTestId="explore-by-ingredient" />
         <ExploreLink dataTestId="explore_food_by_nationality" />
-        <Link to={ `/foods/${randomFoodUrl}` }>
-          <button
-            type="button"
-            data-testid="explore-surprise"
-            className="explore_food_by_surprise"
-          >
-            <span className="title_button">Surprise me!</span>
-          </button>
-        </Link>
+        <ExploreLink dataTestId="explore-surprise" url={ randomFoodUrl } />
       </div>
       <Footer />
     </section>
