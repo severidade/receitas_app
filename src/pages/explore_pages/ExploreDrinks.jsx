@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import ExploreLink from '../../components/ExploreLink/ExploreLink';
@@ -22,25 +21,15 @@ export default function ExploreDrinks() {
     <section className="container_page_explore">
       <Header title="Explore Drinks" />
       <div className="container_explore_drinks">
-        <Link to="/explore/drinks/ingredients">
-          <button
-            type="button"
-            data-testid="explore-by-ingredient"
-            className="explore_by_ingredient"
-          >
-            <span className="title_button">By Ingredient</span>
-          </button>
-        </Link>
-        <ExploreLink dataTestId="explore-by-ingredient" />
-        <Link to={ `/drinks/${randomDrinkUrl}` }>
-          <button
-            type="button"
-            data-testid="explore-surprise"
-            className="explore_suprise"
-          >
-            <span className="title_button">Surprise me!</span>
-          </button>
-        </Link>
+        <ExploreLink
+          dataTestId="explore-by-ingredient"
+          routeType="drinks"
+        />
+        <ExploreLink
+          dataTestId="explore-surprise"
+          url={ randomDrinkUrl }
+          routeType="drinks"
+        />
       </div>
       <Footer />
     </section>

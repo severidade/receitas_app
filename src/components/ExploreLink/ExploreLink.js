@@ -4,7 +4,7 @@ import './ExploreLink.css';
 
 import { Link } from 'react-router-dom';
 
-export default function ExploreLink({ dataTestId, url }) {
+export default function ExploreLink({ dataTestId, url, routeType }) {
   const linkMapping = {
     'explore-foods': {
       linkTo: 'explore/foods',
@@ -17,9 +17,13 @@ export default function ExploreLink({ dataTestId, url }) {
       className: 'explore_drinks',
     },
     'explore-by-ingredient': {
-      linkTo: '/explore/foods/ingredients',
+      linkTo: routeType === 'foods'
+        ? '/explore/foods/ingredients'
+        : '/explore/drinks/ingredients',
       title: 'By Ingredient',
-      className: 'explore_food_by_ingredient',
+      className: routeType === 'foods'
+        ? 'explore_food_by_ingredient'
+        : 'explore_drink_by_ingredient',
     },
     explore_food_by_nationality: {
       linkTo: '/explore/foods/nationalities',
@@ -27,9 +31,11 @@ export default function ExploreLink({ dataTestId, url }) {
       className: 'explore_food_by_nationality',
     },
     'explore-surprise': {
-      linkTo: `/foods/${url}`,
+      linkTo: routeType === 'foods' ? `/foods/${url}` : `/drinks/${url}`,
       title: 'Surprise me',
-      className: 'explore_food_by_surprise',
+      className: routeType === 'foods'
+        ? 'explore_food_by_surprise'
+        : 'explore_drink_by_surprise',
     },
   };
 
@@ -53,4 +59,5 @@ export default function ExploreLink({ dataTestId, url }) {
 ExploreLink.propTypes = {
   dataTestId: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
+  routeType: PropTypes.string.isRequired,
 };

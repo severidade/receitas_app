@@ -20,6 +20,10 @@ a[ class ^= 'explore' ] {
   background: url('./img/foods_by_ingredient.svg');
 }
 
+.explore_drink_by_ingredient {
+  background: url('./img/explore_drinks_by_ingredientes.svg');
+}
+
 .explore_food_by_nationality {
   background: url('./img/explore_food_nacionalidade.svg');
 }
@@ -28,6 +32,9 @@ a[ class ^= 'explore' ] {
   background: url('./img/food_suprise.svg');
 }
 
+.explore_drink_by_surprise {
+  background: url('./img/explore_drinks_suprise.svg');
+}
 
 .title_link {
   bottom: 0;

@@ -21,9 +21,16 @@ export default function ExploreFoods() {
     <section className="container_page_explore">
       <Header title="Explore Foods" />
       <div className="container_explore_foods">
-        <ExploreLink dataTestId="explore-by-ingredient" />
-        <ExploreLink dataTestId="explore_food_by_nationality" />
-        <ExploreLink dataTestId="explore-surprise" url={ randomFoodUrl } />
+        <ExploreLink
+          dataTestId="explore-by-ingredient"
+          routeType="foods"
+        />
+        <ExploreLink dataTestId="explore_food_by_nationality" routeType="foods" />
+        <ExploreLink
+          dataTestId="explore-surprise"
+          url={ randomFoodUrl }
+          routeType="foods"
+        />
       </div>
       <Footer />
     </section>

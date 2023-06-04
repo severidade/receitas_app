@@ -11,6 +11,7 @@ import ExploreDrinks from './pages/explore_pages/ExploreDrinks';
 
 import ExploreDrinksIngredients from './pages/ExploreDrinksIngredients';
 import ExploreFoodsIngredients from './pages/ExploreFoodsIngredients';
+
 import ExploreFoodsNationalities from './pages/ExploreFoodsNationalities';
 import FavoriteRecipes from './pages/FavoriteRecipes';
 import FoodDetails from './pages/FoodDetails';
