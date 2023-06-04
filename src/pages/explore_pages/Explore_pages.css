@@ -14,7 +14,7 @@
   width: 100vw;
 } */
 
-.container_explore, .container_explore_foods {
+.container_explore, .container_explore_foods, .container_explore_drinks {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@
 
 @media screen and ( min-width : 900px ) {
 
-  .container_explore, .container_explore_foods {
+  .container_explore, .container_explore_foods, .container_explore_drinks {
     background-color: tomato;
     margin: auto;
     width: 20vw;

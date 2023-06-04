@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import ExploreLink from '../../components/ExploreLink/ExploreLink';
 
-import '../CSS/page_explore_drink.css';
+// import '../CSS/page_explore_drink.css';
+import './Explore_pages.css';
 
 export default function ExploreDrinks() {
   const [randomDrinkUrl, setRandomDrinkUrl] = useState();
@@ -17,7 +19,7 @@ export default function ExploreDrinks() {
   useEffect(() => { randomDrink(); }, []);
 
   return (
-    <section className="container_page_explore_drinks">
+    <section className="container_page_explore">
       <Header title="Explore Drinks" />
       <div className="container_explore_drinks">
         <Link to="/explore/drinks/ingredients">
@@ -29,6 +31,7 @@ export default function ExploreDrinks() {
             <span className="title_button">By Ingredient</span>
           </button>
         </Link>
+        <ExploreLink dataTestId="explore-by-ingredient" />
         <Link to={ `/drinks/${randomDrinkUrl}` }>
           <button
             type="button"

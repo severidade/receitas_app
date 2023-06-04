@@ -7,8 +7,8 @@ import DrinksDetails from './pages/DrinksDetails';
 import DrinksInProgress from './pages/DrinksInProgress';
 import Explore from './pages/explore_pages/Explore';
 import ExploreFoods from './pages/explore_pages/ExploreFoods';
+import ExploreDrinks from './pages/explore_pages/ExploreDrinks';
 
-import ExploreDrinks from './pages/ExploreDrinks';
 import ExploreDrinksIngredients from './pages/ExploreDrinksIngredients';
 import ExploreFoodsIngredients from './pages/ExploreFoodsIngredients';
 import ExploreFoodsNationalities from './pages/ExploreFoodsNationalities';
