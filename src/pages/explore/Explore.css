@@ -1,0 +1,36 @@
+.container_page_explore {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* .container_page_explore:before {
+  background: url('../../images/noisebg.png') #f3f1f1;
+  content: '';
+  height: 100vh;
+  max-width: 100%;
+  position: fixed;
+  width: 100vw;
+} */
+
+.container_explore {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  max-width: 100%;
+  padding: 0 20px 120px;
+  position: absolute;
+  top: 150px;
+  width: 100vw;
+}
+
+@media screen and ( min-width : 900px ) {
+
+  .container_explore {
+    background-color: tomato;
+    margin: auto;
+    width: 20vw;
+  }
+}
