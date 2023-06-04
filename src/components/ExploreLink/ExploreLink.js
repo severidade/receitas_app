@@ -7,12 +7,12 @@ import { Link } from 'react-router-dom';
 export default function ExploreLink({ dataTestId }) {
   const linkMapping = {
     'explore-foods': {
-      linkTo: '/foods',
+      linkTo: 'explore/foods',
       title: 'Explore Foods',
       className: 'explore_foods',
     },
     'explore-drinks': {
-      linkTo: '/drinks',
+      linkTo: 'explore/drinks',
       title: 'Explore Drinks',
       className: 'explore_drinks',
     },
