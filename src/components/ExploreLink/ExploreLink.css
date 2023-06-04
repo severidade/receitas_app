@@ -16,6 +16,14 @@ a[ class ^= 'explore' ] {
   background: url('./img/explore_drinks.svg');
 }
 
+.explore_food_by_ingredient {
+  background: url('./img/foods_by_ingredient.svg');
+}
+
+.explore_food_by_nationality {
+  background: url('./img/explore_food_nacionalidade.svg');
+}
+
 .title_link {
   bottom: 0;
   color: var(--dark_color);

@@ -16,6 +16,16 @@ export default function ExploreLink({ dataTestId }) {
       title: 'Explore Drinks',
       className: 'explore_drinks',
     },
+    'explore-by-ingredient': {
+      linkTo: '/explore/foods/nationalities',
+      title: 'By Ingredient',
+      className: 'explore_food_by_ingredient',
+    },
+    explore_food_by_nationality: {
+      linkTo: '/explore/foods/nationalities',
+      title: 'By Nationality',
+      className: 'explore_food_by_nationality',
+    },
   };
 
   const { linkTo, title, className } = linkMapping[dataTestId] || {};

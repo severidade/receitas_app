@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import ExploreLink from '../../components/ExploreLink/ExploreLink';
 
 // import '../CSS/page_explore_food.css';
 import './Explore_pages.css';
@@ -21,24 +22,8 @@ export default function ExploreFoods() {
     <section className="container_page_explore">
       <Header title="Explore Foods" />
       <div className="container_explore_foods">
-        <Link to="/explore/foods/ingredients">
-          <button
-            type="button"
-            data-testid="explore-by-ingredient"
-            className="explore_food_by_ingredient"
-          >
-            <span className="title_button">By Ingredient</span>
-          </button>
-        </Link>
-        <Link to="/explore/foods/nationalities">
-          <button
-            type="button"
-            data-testid="explore-by-nationality"
-            className="explore_food_by_nationality"
-          >
-            <span className="title_button">By Nationality</span>
-          </button>
-        </Link>
+        <ExploreLink dataTestId="explore-by-ingredient" />
+        <ExploreLink dataTestId="explore_food_by_nationality" />
         <Link to={ `/foods/${randomFoodUrl}` }>
           <button
             type="button"
