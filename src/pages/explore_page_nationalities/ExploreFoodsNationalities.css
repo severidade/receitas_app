@@ -1,5 +1,5 @@
 .container_page_foods_nationalities:before {
-  background: url('../images/noisebg.png') #f3f1f1;
+  background: url('../../images/noisebg.png') #f3f1f1;
   content: '';
   height: 100vh;
   max-width: 100%;
@@ -102,3 +102,34 @@
   text-decoration: none;
 }
 
+@media screen and ( min-width : 900px ) {
+
+  .selected_nationalities {
+    left: 50%;
+    padding: 0;
+    position: absolute;
+    top: 160px;
+    transform: translateX(-50%);
+    width: 60vw;
+  }
+
+  .container_foods_by_nationalities {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    left: 50%;
+    padding: 0 0 80px;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 60vw;
+  }
+
+}
+
+@media screen and ( min-width : 1400px ) {
+
+  .container_foods_by_nationalities {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}

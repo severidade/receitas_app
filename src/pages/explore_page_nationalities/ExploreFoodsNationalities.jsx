@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import RecipeCard from '../components/RecipeCard';
-import FoodsContext from '../context/FoodsContext/FoodsContext';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import RecipeCard from '../../components/RecipeCard';
+import FoodsContext from '../../context/FoodsContext/FoodsContext';
 
-import '../CSS/foods_by_nationality.css';
+import './ExploreFoodsNationalities.css';
 
 export default function ExploreFoodsNationalities() {
   const { nationalities,

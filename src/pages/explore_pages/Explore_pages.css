@@ -5,14 +5,15 @@
   justify-content: center;
 }
 
-/* .container_page_explore:before {
+.container_page_explore:before {
   background: url('../../images/noisebg.png') #f3f1f1;
   content: '';
   height: 100vh;
   max-width: 100%;
   position: fixed;
+  top: 0;
   width: 100vw;
-} */
+}
 
 .container_explore, .container_explore_foods, .container_explore_drinks {
   align-items: center;
@@ -29,7 +30,6 @@
 @media screen and ( min-width : 900px ) {
 
   .container_explore, .container_explore_foods, .container_explore_drinks {
-    background-color: tomato;
     margin: auto;
     width: 20vw;
   }
