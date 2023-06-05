@@ -1,4 +1,4 @@
-/* stylelint-disable-next-line selector-no-qualifying-type */
+/* stylelint-disable selector-no-qualifying-type */
 a[ class ^= 'explore' ] {
   background-position: top;
   background-repeat: no-repeat;
@@ -59,7 +59,12 @@ a[ class ^= 'explore' ] {
   position: absolute;
   top: 0;
   transform: translateX(-50%);
+  transition: width ease-in-out 0.5s;
   width: 32px;
+}
+
+a[ class ^= 'explore' ]:hover > .title_link:before {
+  width: 60px;
 }
 
 .title_link:after {
