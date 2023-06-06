@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { useContext, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import Footer from '../components/Footer';
-import Header from '../components/Header';
+import Header from '../components/Header/Header';
 import RecipeCard from '../components/RecipeCard/RecipeCard';
 import FoodsContext from '../context/FoodsContext/FoodsContext';
 import ProfileContext from '../context/ProfileContext/ProfileContext';

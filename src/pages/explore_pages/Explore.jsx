@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../../components/Footer';
-import Header from '../../components/Header';
+import Header from '../../components/Header/Header';
 import ExploreLink from '../../components/ExploreLink/ExploreLink';
 
 import './Explore_pages.css';

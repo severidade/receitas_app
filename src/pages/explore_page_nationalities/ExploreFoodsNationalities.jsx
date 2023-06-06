@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Footer from '../../components/Footer';
-import Header from '../../components/Header';
+import Header from '../../components/Header/Header';
 import RecipeCard from '../../components/RecipeCard/RecipeCard';
 import FoodsContext from '../../context/FoodsContext/FoodsContext';
 

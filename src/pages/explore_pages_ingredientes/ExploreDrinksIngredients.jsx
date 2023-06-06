@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Footer from '../../components/Footer';
-import Header from '../../components/Header';
+import Header from '../../components/Header/Header';
 import Ingredients from '../../components/Ingredients';
 
 // import '../CSS/page_explore_drinks_ingredientes.css';

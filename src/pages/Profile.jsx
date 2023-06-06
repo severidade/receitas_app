@@ -1,8 +1,7 @@
 import React, { /* useContext */ } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
-import Header from '../components/Header';
-
+import Header from '../components/Header/Header';
 import '../CSS/page_profile.css';
 
 export default function Profile() {
