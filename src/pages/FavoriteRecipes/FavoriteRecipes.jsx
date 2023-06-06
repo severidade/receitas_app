@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import FavoriteRecipeCard from '../components/FavoriteRecipeCard';
-import Header from '../components/Header/Header';
+import FavoriteRecipeCard from '../../components/FavoriteRecipeCard';
+import Header from '../../components/Header/Header';
 
-import '../CSS/page_favorite.css';
+import './FavoriteRecipes.css';
 
 export default function FavoriteRecipes() {
   const [doneRecipes, setDoneRecipes] = useState();
@@ -30,7 +30,7 @@ export default function FavoriteRecipes() {
     <section className="container_page_favorite">
       <Header title="Favorite Recipes" />
       <div className="main_container_favorite">
-        <dir className="container_menu">
+        <dir className="container_menu_favorite">
           <button
             data-testid="filter-by-all-btn"
             type="button"
