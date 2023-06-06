@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import './App.css';
 
 // Componentes relacionados à seção "Explore"
 import Explore from './pages/explore_pages/Explore';
