@@ -27,10 +27,12 @@ export default function Header({ title }) {
       </Link>
 
       <dir className="container_header_title_app">
-        <h1 className="header_title_app">
-          easy
-          <strong>cooking</strong>
-        </h1>
+        <Link to="/foods">
+          <h1 className="header_title_app">
+            easy
+            <strong>cooking</strong>
+          </h1>
+        </Link>
       </dir>
 
       <h1 className="nav_title" data-testid="page-title">{title}</h1>

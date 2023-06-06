@@ -1,5 +1,5 @@
 .container_page_explore_foods_ingredientes:before {
-  background: url('../images/noisebg.png') #f3f1f1;
+  background: url('../../images/noisebg.png') #f3f1f1;
   content: '';
   height: 100vh;
   max-width: 100%;
@@ -7,7 +7,16 @@
   width: 100vw;
 }
 
-.conteiner_foods_ingredidentes {
+.container_page_explore_drinks_ingredientes:before {
+  background: url('../../images/noisebg.png') #f3f1f1;
+  content: '';
+  height: 100vh;
+  max-width: 100%;
+  position: fixed;
+  width: 100vw;
+}
+
+.conteiner_foods_ingredidentes, .conteiner_drinks_ingredientes {
   align-items: center;
   display: grid;
   flex-direction: column;
@@ -58,6 +67,7 @@
   position: absolute;
   top: -10px;
   transform: translateX(-50%);
+  transition: width ease-in-out 0.5s;
   width: 32px;
 }
 
@@ -70,4 +80,36 @@
   top: -8px;
   transform: translateX(-50%);
   width: 120px;
+}
+
+.conteiner_foods_ingredidentes > div:hover > .name_ingredient:before {
+  width: 60px;
+}
+
+.conteiner_drinks_ingredientes > div:hover > .name_ingredient:before {
+  width: 60px;
+}
+
+
+@media screen and ( min-width : 900px ) {
+
+  .conteiner_foods_ingredidentes, .conteiner_drinks_ingredientes {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    left: 50%;
+    padding: 0 0 80px;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 60vw;
+  }
+
+}
+
+@media screen and ( min-width : 1400px ) {
+
+  .conteiner_foods_ingredidentes, .conteiner_drinks_ingredientes {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
 }

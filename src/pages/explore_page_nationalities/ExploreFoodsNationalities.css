@@ -1,5 +1,5 @@
 .container_page_foods_nationalities:before {
-  background: url('../images/noisebg.png') #f3f1f1;
+  background: url('../../images/noisebg.png') #f3f1f1;
   content: '';
   height: 100vh;
   max-width: 100%;
@@ -58,47 +58,38 @@
 }
 
 .selected_nationalities label select {
-
-  /* background-color: aqua; */
   height: 100%;
   width: 100%;
 }
 
-.card_container_foods .card {
+@media screen and ( min-width : 900px ) {
 
-  /* background-color: tomato; */
-  border: solid 1px var(--dark_color);
-  display: flex;
-  flex-direction: column-reverse;
-  position: relative;
-  width: 100%;
+  .selected_nationalities {
+    left: 50%;
+    padding: 0;
+    position: absolute;
+    top: 160px;
+    transform: translateX(-50%);
+    width: 60vw;
+  }
+
+  .container_foods_by_nationalities {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    left: 50%;
+    padding: 0 0 80px;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 60vw;
+  }
+
 }
 
-.container_foods_by_nationalities .card:after {
-  background-color: var(--dark_color);
-  bottom: -0;
-  content: '';
-  height: 5px;
-  left: 20px;
-  position: absolute;
-  width: 40px;
-}
+@media screen and ( min-width : 1400px ) {
 
-.card_container_foods .card_image {
-  height: 200px;
-  object-fit: cover;
-  width: 100%;
-}
+  .container_foods_by_nationalities {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
-.container_foods_by_nationalities .card_title {
-  color: var(--dark_color);
-  font-family: Volkhov , serif;
-  font-size: 16px;
-  font-style: italic;
-  font-weight: 700;
-  line-height: 19px;
-  padding: 20px;
-  position: relative;
-  text-decoration: none;
 }
-

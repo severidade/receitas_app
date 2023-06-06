@@ -10,10 +10,6 @@
 /* Comidas e bebidas */
 .main_container_foods, .main_container_drinks {
   align-items: center;
-
-  /* background-color: aquamarine; */
-
-  /* background: tomato; */
   display: flex;
   flex-flow: wrap;
   flex-direction: row;
@@ -26,7 +22,7 @@
 
 .card_container_foods {
 
-  /* border: solid 1px; */
+  /* esse aqui tem responsividade no desktop */
   display: flex;
   flex-direction: column;
   grid-gap: 20px;
@@ -36,9 +32,7 @@
 
 .card_container_drinks {
 
-  /* background-color: aquamarine; */
-
-  /* border: solid 1px; */
+  /* esse aqui tem responsividade no desktop */
   display: grid;
   flex-direction: column;
   grid-gap: 20px;
@@ -48,77 +42,21 @@
   width: 100%;
 }
 
-.card_container_foods .card {
-
-  /* background-color: tomato; */
-  border: solid 1px var(--dark_color);
-  display: flex;
-  flex-direction: column-reverse;
-  position: relative;
-  width: 100%;
-}
-
-.card_container_foods .card:after, .card_container_drinks .card:after {
-  background-color: var(--dark_color);
-  bottom: -0;
-  content: '';
-  height: 5px;
-  left: 10px;
-  position: absolute;
-  width: 40px;
-}
-
-.card_container_foods .card_image {
-  height: 200px;
-  object-fit: cover;
-  width: 100%;
-}
-
-.card_container_foods .card_title {
-  color: var(--dark_color);
-  font-family: Volkhov , serif;
-  font-size: 14px;
-  font-style: italic;
-  font-weight: 700;
-  line-height: 19px;
-  padding: 20px 10px;
-  position: relative;
-  text-decoration: none;
-}
-
-/* para bebidas */
-.card_container_drinks .card {
-
-  /* background-color: tomato; */
-  border: solid 1px var(--dark_color);
-  display: flex;
-  flex-direction: column-reverse;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.card_container_drinks .card_image {
+/* .card_container_foods .card_image {
   height: 150px;
   object-fit: cover;
   width: 100%;
-}
+} */
 
-.card_container_drinks .card_title {
-  color: var(--dark_color);
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  font-family: Volkhov , serif;
-  font-size: 14px;
-  font-style: italic;
-  font-weight: 700;
-  justify-content: flex-end;
-  line-height: 19px;
-  padding: 20px 10px;
-  position: relative;
-  text-decoration: none;
-}
+
+/* para bebidas */
+
+/* .card_container_drinks .card_image {
+  height: 150px;
+  object-fit: cover;
+  width: 100%;
+} */
+
 
 /* Filtros */
 .container_filters {

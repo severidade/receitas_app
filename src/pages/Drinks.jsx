@@ -3,7 +3,7 @@ import React, { useContext, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import RecipeCard from '../components/RecipeCard';
+import RecipeCard from '../components/RecipeCard/RecipeCard';
 import DrinksContext from '../context/DrinksContext/DrinksContext';
 import ProfileContext from '../context/ProfileContext/ProfileContext';
 
@@ -97,6 +97,7 @@ function Drinks(props) {
                     name={ drink.strDrink }
                     image={ drink.strDrinkThumb }
                     index={ index }
+                    cardType="drink_type"
                   />
                 </div>
               )
@@ -112,6 +113,7 @@ function Drinks(props) {
                   name={ drink.strDrink }
                   image={ drink.strDrinkThumb }
                   index={ i }
+                  cardType="drink_type"
                 />
               </div>
             )

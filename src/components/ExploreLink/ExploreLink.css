@@ -1,0 +1,79 @@
+/* stylelint-disable selector-no-qualifying-type */
+a[ class ^= 'explore' ] {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 150px;
+  position: relative;
+  width: 100%;
+}
+
+.explore_foods {
+  background: url('./img/explore_foods.svg');
+}
+
+.explore_drinks {
+  background: url('./img/explore_drinks.svg');
+}
+
+.explore_food_by_ingredient {
+  background: url('./img/foods_by_ingredient.svg');
+}
+
+.explore_drink_by_ingredient {
+  background: url('./img/explore_drinks_by_ingredientes.svg');
+}
+
+.explore_food_by_nationality {
+  background: url('./img/explore_food_nacionalidade.svg');
+}
+
+.explore_food_by_surprise {
+  background: url('./img/food_suprise.svg');
+}
+
+.explore_drink_by_surprise {
+  background: url('./img/explore_drinks_suprise.svg');
+}
+
+.title_link {
+  bottom: 0;
+  color: var(--dark_color);
+  font-family: Volkhov , serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+  height: 40px;
+  left: 50%;
+  line-height: 40px;
+  position: absolute;
+  text-decoration: none;
+  transform: translate(-50%, 50px);
+}
+
+.title_link:before {
+  background-color: var(--dark_color);
+  content: '';
+  height: 5px;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  transition: width ease-in-out 0.5s;
+  width: 32px;
+}
+
+a[ class ^= 'explore' ]:hover > .title_link:before {
+  width: 60px;
+}
+
+.title_link:after {
+  background-color: var(--dark_color);
+  content: '';
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  top: 2px;
+  transform: translateX(-50%);
+  width: 120px;
+}

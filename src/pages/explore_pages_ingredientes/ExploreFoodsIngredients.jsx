@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import Ingredients from '../components/Ingredients';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import Ingredients from '../../components/Ingredients';
 
-import '../CSS/page_explore_food_ingredientes.css';
+import './explore_page_ingredientes.css';
 
 export default function ExploreFoodsIngredients() {
   const [ingredients, setIngredients] = useState();
