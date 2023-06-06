@@ -1,8 +1,8 @@
 import React, { /* useContext */ } from 'react';
 import { Link } from 'react-router-dom';
-import Footer from '../components/Footer';
-import Header from '../components/Header/Header';
-import '../CSS/page_profile.css';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header/Header';
+import './Profile.css';
 
 export default function Profile() {
   const userEmail = JSON.parse(localStorage.getItem('user'));

@@ -14,11 +14,11 @@ import ExploreFoodsNationalities from
 
 // Componentes relacionados à seção "Auth" (autenticação)
 import Login from './pages/Login/Login';
-import Profile from './pages/Profile';
+import Profile from './pages/Profile/Profile';
 
 // Componentes relacionados à seção "Receitas"
-import DoneRecipes from './pages/DoneRecipes';
-import FavoriteRecipes from './pages/FavoriteRecipes';
+import DoneRecipes from './pages/DoneRecipes/DoneRecipes';
+import FavoriteRecipes from './pages/FavoriteRecipes/FavoriteRecipes';
 
 // Componentes relacionados à seção "Alimentos" (foods)
 import Foods from './pages/foods_and_drinks_page/Foods';

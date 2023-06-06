@@ -1,5 +1,5 @@
 .container_page_favorite:before {
-  background: url('../images/noisebg.png') #f3f1f1;
+  background: url('../../images/noisebg.png') #f3f1f1;
   content: '';
   height: 100vh;
   max-width: 100%;
@@ -19,7 +19,7 @@
   width: 100vw;
 }
 
-.container_menu {
+.container_menu_favorite {
   align-items: center;
 
   /* background-color: olive; */
@@ -30,7 +30,7 @@
   width: 100%;
 }
 
-.container_menu button {
+.container_menu_favorite button {
   background-color: white;
   border-radius: 30px;
   color: var(--dark_color);
@@ -137,7 +137,7 @@
 
 
 .social_info .button_share {
-  background: url('../images/compartilhar.png') var(--height_color_03);
+  background: url('../../images/compartilhar.png') var(--height_color_03);
   background-position: 45% center;
   background-repeat: no-repeat;
   background-size: 50%;
@@ -165,4 +165,20 @@
 
   /* transform: translateY(-25px); */
   width: 50px;
+}
+
+
+@media screen and ( min-width : 600px ) {
+
+  .container_menu_favorite {
+    width: 50vw;
+  }
+
+  .container_favorite {
+    display: grid;
+    gap: 90px;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 40px;
+    width: 50vw;
+  }
 }

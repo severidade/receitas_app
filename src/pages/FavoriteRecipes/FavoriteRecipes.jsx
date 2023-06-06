@@ -1,23 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import DoneRecipesCard from '../components/DoneRecipesCard';
-import Header from '../components/Header/Header';
+import FavoriteRecipeCard from '../../components/FavoriteRecipeCard';
+import Header from '../../components/Header/Header';
 
-import '../CSS/page_done_recipes.css';
+import './FavoriteRecipes.css';
 
-export default function DoneRecipes() {
+export default function FavoriteRecipes() {
   const [doneRecipes, setDoneRecipes] = useState();
   const [filter, setFilter] = useState('');
+  const [favorite, setFavorite] = useState();
 
   useEffect(() => {
     async function getLocalStorage() {
-      const getDoneRecipes = await JSON.parse(localStorage.getItem('doneRecipes'));
+      const getFavoriteRecipes = await JSON.parse(localStorage
+        .getItem('favoriteRecipes'));
 
-      setDoneRecipes(getDoneRecipes);
+      setDoneRecipes(getFavoriteRecipes);
     }
     getLocalStorage();
-  }, []);
+  }, [favorite]);
 
-  const filterRecipes = (item) => {
+  const fliterRecipes = (item) => {
     if (filter !== '') {
       return filter === item.type;
     }
@@ -25,10 +27,10 @@ export default function DoneRecipes() {
   };
 
   return (
-    <section className="container_page_done">
-      <Header title="Done Recipes" />
-      <div className="main_container_done">
-        <dir className="container_menu">
+    <section className="container_page_favorite">
+      <Header title="Favorite Recipes" />
+      <div className="main_container_favorite">
+        <dir className="container_menu_favorite">
           <button
             data-testid="filter-by-all-btn"
             type="button"
@@ -51,24 +53,24 @@ export default function DoneRecipes() {
             Drinks
           </button>
         </dir>
-        <div className="container_done">
-          {doneRecipes && (
-            doneRecipes.filter((item) => filterRecipes(item)).map((recipe, index) => (
+        <div className="container_favorite">
+          { doneRecipes && (
+            doneRecipes.filter((item) => fliterRecipes(item)).map((recipe, index) => (
               recipe.type === 'food' ? (
-                <DoneRecipesCard
+                <FavoriteRecipeCard
                   key={ index }
                   id={ recipe.id }
                   image={ recipe.image }
                   category={ recipe.category }
                   nationality={ recipe.nationality }
                   recipeName={ recipe.name }
-                  doneDate={ recipe.doneDate }
-                  tagName={ recipe.tags }
                   index={ index }
-                  foodOrDrink="food"
+                  foodOrDrink="foods"
+                  setFavorite={ setFavorite }
+                  favorite={ favorite }
                 />
               ) : (
-                <DoneRecipesCard
+                <FavoriteRecipeCard
                   key={ index }
                   id={ recipe.id }
                   image={ recipe.image }
@@ -76,8 +78,9 @@ export default function DoneRecipes() {
                   recipeName={ recipe.name }
                   doneDate={ recipe.doneDate }
                   index={ index }
-                  tagName={ recipe.tags }
-                  foodOrDrink="drink"
+                  foodOrDrink="drinks"
+                  setFavorite={ setFavorite }
+                  favorite={ favorite }
                 />
               )
             )))}
