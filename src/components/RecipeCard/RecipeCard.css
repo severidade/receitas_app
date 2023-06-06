@@ -1,3 +1,4 @@
+/* stylelint-disable selector-no-qualifying-type */
 .card {
 
   /* background-color: rgb(105, 235, 12); */
@@ -25,10 +26,17 @@
 }
 
 /* talvez no futuro colocar a imagem da comida mais alta 200px */
-.card_image {
-  height: 150px;
+img[ class ^= 'card_image' ] {
   object-fit: cover;
   width: 100%;
+}
+
+.card_image_drink {
+  height: 150px;
+}
+
+.card_image_food {
+  height: 200px;
 }
 
 

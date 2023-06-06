@@ -98,6 +98,7 @@ function Foods(props) {
                     name={ food.strMeal }
                     image={ food.strMealThumb }
                     index={ index }
+                    cardType="food_type"
                   />
                 </div>
               )
@@ -114,6 +115,7 @@ function Foods(props) {
                   name={ food.strMeal }
                   image={ food.strMealThumb }
                   index={ i }
+                  cardType="food_type"
                 />
               </div>
             )

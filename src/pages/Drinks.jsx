@@ -97,6 +97,7 @@ function Drinks(props) {
                     name={ drink.strDrink }
                     image={ drink.strDrinkThumb }
                     index={ index }
+                    cardType="drink_type"
                   />
                 </div>
               )
@@ -112,6 +113,7 @@ function Drinks(props) {
                   name={ drink.strDrink }
                   image={ drink.strDrinkThumb }
                   index={ i }
+                  cardType="drink_type"
                 />
               </div>
             )

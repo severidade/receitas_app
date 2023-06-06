@@ -71,6 +71,7 @@ export default function ExploreFoodsNationalities() {
             id={ item.idMeal }
             image={ item.strMealThumb }
             index={ index }
+            cardType="food_type"
           />
         ))}
       </div>

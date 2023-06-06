@@ -6,7 +6,12 @@ import './RecipeCard.css';
 
 class RecipeCard extends React.Component {
   render() {
-    const { name, image, index, id, testid, foodOrDrink } = this.props;
+    const { name, image, index, id, testid, foodOrDrink, cardType } = this.props;
+    const imageClassName = cardType === 'drink_type'
+      ? 'card_image_drink'
+      : 'card_image_food';
+    console.log(imageClassName);
+
     return (
       foodOrDrink === 'food' ? (
         <Link to={ `/drinks/${id}` }>
@@ -26,7 +31,7 @@ class RecipeCard extends React.Component {
                   { name }
                 </h1>
                 <img
-                  className="card_image"
+                  className={ imageClassName }
                   src={ image }
                   alt={ `imagem da receita ${name}` }
                   data-testid={ `${index}-card-img` }
@@ -53,7 +58,7 @@ class RecipeCard extends React.Component {
                   { name }
                 </h1>
                 <img
-                  className="card_image"
+                  className={ imageClassName }
                   src={ image }
                   alt={ `imagem da receita ${name}` }
                   data-testid={ `${index}-card-img` }
@@ -74,6 +79,7 @@ RecipeCard.propTypes = {
   testid: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   id: PropTypes.string,
   foodOrDrink: PropTypes.string.isRequired,
+  cardType: PropTypes.string.isRequired,
 };
 RecipeCard.defaultProps = {
   id: '',
