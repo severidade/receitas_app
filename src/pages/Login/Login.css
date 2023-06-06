@@ -10,7 +10,7 @@
 }
 
 .container_login_image {
-  background: url('../images/vetores/login_bg_curved.svg');
+  background: url('./img/login_bg_curved.svg');
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,7 +20,7 @@
 }
 
 .container_login_image:before {
-  background: url('../images/vetores/cozinhando.svg');
+  background: url('./img/cozinhando.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -189,4 +189,18 @@ input:valid ~ .input_login { top: -10px; }
   margin-top: 20px;
   text-transform: uppercase;
   width: 100%;
+}
+
+@media screen and ( min-width : 600px ) {
+
+  .container_login_form {
+    width: 50vw;
+  }
+}
+
+@media screen and ( min-width : 900px ) {
+
+  .container_login_form {
+    width: 40vw;
+  }
 }

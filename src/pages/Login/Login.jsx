@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import ProfileContext from '../context/ProfileContext/ProfileContext';
+import ProfileContext from '../../context/ProfileContext/ProfileContext';
 
-import '../CSS/login_page.css';
+import './Login.css';
 
 function Login(props) {
   const {

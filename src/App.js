@@ -13,7 +13,7 @@ import ExploreFoodsNationalities from
 './pages/explore_page_nationalities/ExploreFoodsNationalities';
 
 // Componentes relacionados à seção "Auth" (autenticação)
-import Login from './pages/Login';
+import Login from './pages/Login/Login';
 import Profile from './pages/Profile';
 
 // Componentes relacionados à seção "Receitas"
