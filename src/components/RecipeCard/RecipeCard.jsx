@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
+import './RecipeCard.css';
+
 class RecipeCard extends React.Component {
   render() {
     const { name, image, index, id, testid, foodOrDrink } = this.props;

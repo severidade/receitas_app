@@ -1,0 +1,45 @@
+.card {
+
+  /* background-color: rgb(105, 235, 12); */
+  border: solid 1px var(--dark_color);
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.card:after {
+  background-color: var(--dark_color);
+  bottom: -0;
+  content: '';
+  height: 5px;
+  left: 10px;
+  position: absolute;
+  transition: width ease-in-out 0.5s;
+  width: 40px;
+}
+
+.card:hover:after {
+  width: 60px;
+}
+
+/* talvez no futuro colocar a imagem da comida mais alta 200px */
+.card_image {
+  height: 150px;
+  object-fit: cover;
+  width: 100%;
+}
+
+
+.card_title {
+  color: var(--dark_color);
+  font-family: Volkhov , serif;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 19px;
+  padding: 20px 10px;
+  position: relative;
+  text-decoration: none;
+}

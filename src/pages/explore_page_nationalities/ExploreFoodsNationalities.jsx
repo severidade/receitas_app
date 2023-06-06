@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
-import RecipeCard from '../../components/RecipeCard';
+import RecipeCard from '../../components/RecipeCard/RecipeCard';
 import FoodsContext from '../../context/FoodsContext/FoodsContext';
 
 import './ExploreFoodsNationalities.css';
