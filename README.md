@@ -8,6 +8,7 @@
 * Utilização da biblioteca React-Redux e o Redux para gerenciar estado;
 * Utilização a Context API do React para gerenciar estado;
 * Utilização os Hooks (useState, useContext, useEffect)
+* Testes com React Testing Library
 
 A deploy da aplicação em (link)[receitas.severidade.com.br/].
 
