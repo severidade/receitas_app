@@ -1,32 +1,32 @@
 import PropTypes from 'prop-types';
 import React, { useContext, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
-import Footer from '../components/Footer';
-import Header from '../components/Header/Header';
-import RecipeCard from '../components/RecipeCard/RecipeCard';
-import DrinksContext from '../context/DrinksContext/DrinksContext';
-import ProfileContext from '../context/ProfileContext/ProfileContext';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header/Header';
+import RecipeCard from '../../components/RecipeCard/RecipeCard';
+import FoodsContext from '../../context/FoodsContext/FoodsContext';
+import ProfileContext from '../../context/ProfileContext/ProfileContext';
 
-import '../CSS/foods_and_drinks.css';
+import './foods_and_drinks.css';
 
-function Drinks(props) {
+function Foods(props) {
   const { setFoodOrDrink } = useContext(ProfileContext);
-
   const {
-    searchDrinksResults,
-    drinksResults,
+    searchFoodsResults,
+    foodsResults,
     recipeCategories,
     filterByCategory,
-    setDrinksResults,
-    drinksResultsRecover,
-  } = useContext(DrinksContext);
+    foodsResultsRecover,
+    setFoodsResults,
+    // setSearchFoodsResults,
+  } = useContext(FoodsContext);
 
-  const results = searchDrinksResults ? searchDrinksResults.drinks : searchDrinksResults;
-  const resultsDrinks = drinksResults || { drinks: [] };
+  const results = searchFoodsResults ? searchFoodsResults.meals : searchFoodsResults;
+  const resultsFoods = foodsResults || { meals: [] };
   const recipeCategoriesFake = recipeCategories || [{}];
 
   useEffect(() => {
-    setFoodOrDrink('drinks');
+    setFoodOrDrink('food');
   });
 
   function select() {
@@ -45,30 +45,31 @@ function Drinks(props) {
     } else {
       select();
       // target.classList.add('notSelected');
-      return setDrinksResults(drinksResultsRecover);
+      return setFoodsResults(foodsResultsRecover);
     }
   }
 
   function showAllRecipes() {
     select();
-    return setDrinksResults(drinksResultsRecover);
+    return setFoodsResults(foodsResultsRecover);
   }
 
   function redirectToDetails(id) {
     const { history } = props;
-    history.push(`/drinks/${id}`);
+    history.push(`/foods/${id}`);
   }
 
   const maxRecipesOnScreen = 11;
   return (
-    <div className="container_page_drinks">
-      <Header title="Drinks" />
-      <section className="main_container_drinks">
+    <div className="container_page_foods">
+      <Header title="Foods" />
+      <section className="main_container_foods">
         <div className="container_filters">
           <button
             data-testid="All-category-filter"
             type="button"
             onClick={ () => showAllRecipes() }
+            className="selected"
           >
             All
           </button>
@@ -84,9 +85,9 @@ function Drinks(props) {
             </button>
           ))}
         </div>
-        <div className="card_container_drinks">
+        <div className="card_container_foods">
           {results ? (
-            results.map((drink, index) => (
+            results.map((food, index) => (
               index > maxRecipesOnScreen ? '' : (
                 <div
                   onClick={ () => redirectToDetails(food.idMeal) }
@@ -94,26 +95,27 @@ function Drinks(props) {
                 >
                   <RecipeCard
                     key={ index }
-                    name={ drink.strDrink }
-                    image={ drink.strDrinkThumb }
+                    name={ food.strMeal }
+                    image={ food.strMealThumb }
                     index={ index }
-                    cardType="drink_type"
+                    cardType="food_type"
                   />
                 </div>
               )
             ))
-          ) : resultsDrinks.drinks.map((drink, i) => (
+          ) : resultsFoods.meals.map((food, i) => (
             i > maxRecipesOnScreen ? '' : (
               <div
-                onClick={ () => redirectToDetails(drink.idDrink) }
+                key={ i }
+                onClick={ () => redirectToDetails(food.idMeal) }
                 aria-hidden="true"
               >
                 <RecipeCard
                   key={ i }
-                  name={ drink.strDrink }
-                  image={ drink.strDrinkThumb }
+                  name={ food.strMeal }
+                  image={ food.strMealThumb }
                   index={ i }
-                  cardType="drink_type"
+                  cardType="food_type"
                 />
               </div>
             )
@@ -125,8 +127,8 @@ function Drinks(props) {
   );
 }
 
-Drinks.propTypes = {
+Foods.propTypes = {
   history: PropTypes.func.isRequired,
 };
 
-export default withRouter(Drinks);
+export default withRouter(Foods);
