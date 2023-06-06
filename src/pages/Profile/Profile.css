@@ -1,5 +1,5 @@
 .container_profile:before {
-  background: url('../images/noisebg.png') #f3f1f1;
+  background: url('../../images/noisebg.png') #f3f1f1;
   content: '';
   height: 100vh;
   max-width: 100%;
@@ -63,5 +63,21 @@
   margin-top: 20px;
   text-transform: uppercase;
   width: 100%;
+}
+
+@media screen and ( min-width : 600px ) {
+
+  .profile {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50vw;
+  }
+}
+
+@media screen and ( min-width : 900px ) {
+
+  .profile {
+    width: 40vw;
+  }
 }
 

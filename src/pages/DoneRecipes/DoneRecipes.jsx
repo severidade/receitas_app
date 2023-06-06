@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import DoneRecipesCard from '../components/DoneRecipesCard';
-import Header from '../components/Header/Header';
+import DoneRecipesCard from '../../components/DoneRecipesCard';
+import Header from '../../components/Header/Header';
 
-import '../CSS/page_done_recipes.css';
+import './DoneRecipes.css';
 
 export default function DoneRecipes() {
   const [doneRecipes, setDoneRecipes] = useState();
@@ -28,7 +28,7 @@ export default function DoneRecipes() {
     <section className="container_page_done">
       <Header title="Done Recipes" />
       <div className="main_container_done">
-        <dir className="container_menu">
+        <dir className="container_menu_done">
           <button
             data-testid="filter-by-all-btn"
             type="button"
