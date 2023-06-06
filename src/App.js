@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import './App.css';
 
 // Componentes relacionados à seção "Explore"
 import Explore from './pages/explore_pages/Explore';
@@ -22,12 +21,12 @@ import DoneRecipes from './pages/DoneRecipes';
 import FavoriteRecipes from './pages/FavoriteRecipes';
 
 // Componentes relacionados à seção "Alimentos" (foods)
-import Foods from './pages/Foods';
+import Foods from './pages/foods_and_drinks_page/Foods';
 import FoodDetails from './pages/FoodDetails';
 import FoodInProgress from './pages/FoodInProgress';
 
 // Componentes relacionados à seção "Bebidas" (drinks)
-import Drinks from './pages/Drinks';
+import Drinks from './pages/foods_and_drinks_page/Drinks';
 import DrinksDetails from './pages/DrinksDetails';
 import DrinksInProgress from './pages/DrinksInProgress';
 

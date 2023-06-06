@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import FavoriteRecipeCard from '../components/FavoriteRecipeCard';
-import Header from '../components/Header';
+import Header from '../components/Header/Header';
 
 import '../CSS/page_favorite.css';
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import DoneRecipesCard from '../components/DoneRecipesCard';
-import Header from '../components/Header';
+import Header from '../components/Header/Header';
 
 import '../CSS/page_done_recipes.css';
 

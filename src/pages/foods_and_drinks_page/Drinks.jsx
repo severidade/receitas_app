@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import React, { useContext, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import RecipeCard from '../components/RecipeCard/RecipeCard';
-import DrinksContext from '../context/DrinksContext/DrinksContext';
-import ProfileContext from '../context/ProfileContext/ProfileContext';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header/Header';
+import RecipeCard from '../../components/RecipeCard/RecipeCard';
+import DrinksContext from '../../context/DrinksContext/DrinksContext';
+import ProfileContext from '../../context/ProfileContext/ProfileContext';
 
-import '../CSS/foods_and_drinks.css';
+import './foods_and_drinks.css';
 
 function Drinks(props) {
   const { setFoodOrDrink } = useContext(ProfileContext);

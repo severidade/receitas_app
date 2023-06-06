@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import profileIcon from '../images/profileIcon.svg';
-import searchIcon from '../images/searchIcon.svg';
-import SearchBar from './SearchBar';
+import profileIcon from '../../images/profileIcon.svg';
+import searchIcon from '../../images/searchIcon.svg';
+import SearchBar from '../SearchBar';
 
-import '../CSS/header.css';
+import './Header.css';
 
 export default function Header({ title }) {
   const searchPaths = ['/foods', '/drinks', '/explore/foods/nationalities'];
@@ -27,7 +27,7 @@ export default function Header({ title }) {
       </Link>
 
       <dir className="container_header_title_app">
-        <Link to="/foods">
+        <Link to="/foods" className="home_link">
           <h1 className="header_title_app">
             easy
             <strong>cooking</strong>
